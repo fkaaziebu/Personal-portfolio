@@ -4,14 +4,18 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import menuIcon from "../assets/menu-icon.svg";
 import closeIcon from "../assets/close-icon.svg";
 
-const Link = ({ page, selectedPage, setSelectedPage }) => {
+const Link = ({ page, selectedPage, setSelectedPage, setIsMenuToggled }) => {
     const lowerCasePage = page.toLowerCase();
     return (
         <AnchorLink
             className={`${selectedPage=== lowerCasePage ? "text-yellow" : ""}
                 hover:text-yelloe transition duration-500`}
             href={`#${lowerCasePage}`}
-            onClick={() => setSelectedPage(lowerCasePage)}
+            onClick={() => {
+                setSelectedPage(lowerCasePage);
+                setIsMenuToggled(false);
+            }
+            }
         >
             {page}
         </AnchorLink>
@@ -24,9 +28,9 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
     const navbarBackground = isTopOfPage ? "" : "bg-red";
 
     return (
-        <nav className={`${navbarBackground} z-40 w-full top-0 py-6`}>
+        <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
             <div className="flex items-center justify-between mx-auto w-5/6">
-                <h4 className="font-playfair text-3xl font-bold">JE</h4>
+                <h4 className="font-playfair text-3xl font-bold">FA</h4>
                 
                 {/* DESKTOP NAV */}
                 {isAboveSmallScreens ? (
@@ -82,26 +86,31 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
                                 page="Home"
                                 selectedPage={selectedPage}
                                 setSelectedPage={setSelectedPage}
+                                setIsMenuToggled={setIsMenuToggled}
                             />
                             <Link 
                                 page="Skills"
                                 selectedPage={selectedPage}
                                 setSelectedPage={setSelectedPage}
+                                setIsMenuToggled={setIsMenuToggled}
                             />
                             <Link 
                                 page="Projects"
                                 selectedPage={selectedPage}
                                 setSelectedPage={setSelectedPage}
+                                setIsMenuToggled={setIsMenuToggled}
                             />
                             <Link 
                                 page="Testimonials"
                                 selectedPage={selectedPage}
                                 setSelectedPage={setSelectedPage}
+                                setIsMenuToggled={setIsMenuToggled}
                             />
                             <Link 
                                 page="Contact"
                                 selectedPage={selectedPage}
                                 setSelectedPage={setSelectedPage}
+                                setIsMenuToggled={setIsMenuToggled}
                             />
                         </div>
                     </div>
