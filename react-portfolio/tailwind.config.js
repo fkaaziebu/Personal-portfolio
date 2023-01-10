@@ -5,13 +5,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        blue: "#2CBCE9",
-        red: "#DC4492",
-        yellow: "#FDCC49",
+        blue: "#1a718c",
+        teal: "#2396ba",
+        red: "#581b3a",
+        yellow: "#caa33a",
         grey: "#EDEDED",
         "deep-blue": "#100026",
         "dark-grey": "#757575",
-        "opaque-black": "rgba(0,0,0,0.35)"
+        "opaque-black": "rgba(0,0,0,0.35)",
       },
       backgroundImage: (theme) => ({
         "gradient-rainbow": "linear-gradient(81.66deg, #00B5EE 7.21%, #FF45A4 45.05%, #FFBA00 79.07%)",
@@ -36,3 +37,4 @@ module.exports = {
   },
   plugins: [],
 }
+

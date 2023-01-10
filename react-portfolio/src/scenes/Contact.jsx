@@ -18,7 +18,7 @@ const Contact = () => {
     }
 
     return (
-        <section id="contact" className="py-48">
+        <section id="contact" className="pt-32 pb-16">
             {/* HEADINGs */}
             <motion.div
             className="flex justify-end w-full"
@@ -75,7 +75,7 @@ const Contact = () => {
                         method="POST"
                     >
                         <input
-                            className="w-full bg-blue font-semibold placeholder-opaque-black p-3" 
+                            className="w-full bg-grey text-deep-blue font-semibold placeholder-opaque-black p-3 rounded-[30px]" 
                             type="text"
                             placeholder="NAME"
                             {...register("name", {
@@ -91,7 +91,7 @@ const Contact = () => {
                         )}
 
                         <input
-                            className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5" 
+                            className="w-full bg-grey deep-blue font-semibold placeholder-opaque-black p-3 mt-5 rounded-[30px]" 
                             type="text"
                             placeholder="EMAIL"
                             {...register("email", {
@@ -107,7 +107,7 @@ const Contact = () => {
                         )}
 
                         <textarea
-                            className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5" 
+                            className="w-full bg-grey deep-blue font-semibold placeholder-opaque-black p-3 mt-5 rounded-[30px]" 
                             type="text"
                             placeholder="MESSAGE"
                             rows="4"
@@ -126,8 +126,8 @@ const Contact = () => {
 
                         <button
                             type="submit"
-                            className="p-5 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-red
-                                hover:text-white transition duration-500"
+                            className="p-5 bg-teal font-semibold text-grey mt-5 hover:bg-red
+                                hover:text-white transition duration-500 rounded-[28px]"
                         >
                             SEND ME A MESSAGE
                         </button>

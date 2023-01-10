@@ -1,14 +1,14 @@
 import SocialMediaIcons from "../components/SocialMediaIcons.jsx";
-import useMdeiaQuery from "../hooks/useMediaQuery";
+import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import profileImage from "../assets/profile-image.png";
+import profileImage from "../assets/profile-image.jpg";
 
 const Landing = ({ setSelectedPage }) => {
-    const isAboveMediumScreens = useMdeiaQuery("(min-width: 1060px)");
+    const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
     return (
-        <section id="home" className="md:flex md:justify-between md:items-center md:h-full gap-16 py-10">
+        <section id="home" className="md:flex md:justify-between md:items-center md:h-full gap-16 pt-10 pb-16">
             
             {/* IMAGE SECTION */}
             <div className="md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32">
@@ -21,14 +21,14 @@ const Landing = ({ setSelectedPage }) => {
                         <img 
                             alt="profile" 
                             className="hover:filter hover:saturate-200 transition duration-500 z-10 w-[75%] 
-                            max-w-[400px] md:max-w-[600px]"
+                            max-w-[400px] md:max-w-[600px] rounded-t-full"
                             src={profileImage} 
                         />
                     </div>
                 ) : (
                     <img 
                         alt="profile" 
-                        className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px]"
+                        className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px] rounded-t-full"
                         src={profileImage} 
                     />
                 )}
@@ -50,8 +50,8 @@ const Landing = ({ setSelectedPage }) => {
                     <p className="text-6xl font-playfair z-10 text-center md:text-start">
                         Fred {""}
                         <span
-                            className="xs:relative xs:text-deep-blue xs:font-semibold z-20
-                                xs:before:content-brush before:absolute before:-left-[25px]
+                            className="relative xs:text-deep-blue xs:font-semibold z-20
+                                before:content-brush before:absolute before:-left-[25px]
                                 before:-top-[70px] before:z-[-1]"
                         >
                             Aziebu
@@ -119,3 +119,4 @@ const Landing = ({ setSelectedPage }) => {
 }
 
 export default Landing;
+

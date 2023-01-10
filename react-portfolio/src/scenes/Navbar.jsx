@@ -1,8 +1,9 @@
 import { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
-import menuIcon from "../assets/menu-icon.svg";
-import closeIcon from "../assets/close-icon.svg";
+import DehazeIcon from '@mui/icons-material/Dehaze';
+import CloseIcon from '@mui/icons-material/Close';
+import { motion } from "framer-motion";
 
 const Link = ({ page, selectedPage, setSelectedPage, setIsMenuToggled }) => {
     const lowerCasePage = page.toLowerCase();
@@ -66,22 +67,23 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
                         className="rounded-full bg-red p-2"
                         onClick={() => setIsMenuToggled(!isMenuToggled)}
                     >
-                        <img alt="menu-icon" src={menuIcon} />
+                        <DehazeIcon />
                     </button>
                 )}
 
-                {/* MOBILE MENU POPUP */}
+
+                {/* MOBILE NAV */}
                 {!isAboveSmallScreens && isMenuToggled && (
-                    <div className="fixed right-0 bottom-0 h-full bg-blue w-[300px]">
+                    <div className="fixed right-0 bottom-0 h-full bg-deep-blue w-[300px]">
                         {/* CLOSE ICONS */}
                         <div className="flex justify-end p-12">
                             <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
-                                <img alt="close-icon" src={closeIcon}/>
+                                <CloseIcon />
                             </button>
                         </div>
 
                         {/* MENU ITEMS */}
-                        <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
+                        <div className="flex flex-col gap-10 m-[33%] text-2xl text-grey">
                             <Link 
                                 page="Home"
                                 selectedPage={selectedPage}

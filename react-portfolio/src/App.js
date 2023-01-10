@@ -7,25 +7,15 @@ import Testimonials from "./scenes/Testimonials";
 import Contact from "./scenes/Contact";
 import Footer from "./scenes/Footer";
 import { useEffect, useState } from 'react';
-// import { useLocation } from "react-router-dom";
 import LineGradient from "./components/LineGradient";
 import useMediaQuery from "./hooks/useMediaQuery";
 
-// const ScrollToTop = () => {
-//   const { pathname } = useLocation();
 
-//   useEffect(() => {
-//     window.scrollTo(0, 0);
-//   }, [pathname]);
-
-//   return null;
-// };
 
 function App() {
   const [selectedPage, setSelectedPage] = useState('home');
   const [isTopOfPage, setIsTopOfPage] = useState(true);
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
-
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,7 +29,6 @@ function App() {
 
   return (
     <div className="app bg-deep-blue">
-      {/* <ScrollToTop /> */}
       <Navbar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}

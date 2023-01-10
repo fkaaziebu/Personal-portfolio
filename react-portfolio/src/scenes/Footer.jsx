@@ -6,7 +6,7 @@ const Footer = () => {
             <div className="w-5/6 mx-auto">
                 <SocialMediaIcons />
                 <div className="md:flex justify-center md:justify-between text-center">
-                    <p className="font-palyfair font-semibold text-2xl text-yellow">Fred Aziebu</p>
+                    <p className="font-palyfair font-semibold text-2xl text-grey">Fred Aziebu</p>
                     <p className="font-palyfair text-md text-yellow">&copy;2022 FA, All Rights Reserved.</p>
                 </div>
             </div>

@@ -1,7 +1,7 @@
-import linkedIn from "../assets/linkedin.png";
-import twitter from "../assets/twitter.png";
-import facebook from "../assets/facebook.png"
-import instagram from "../assets/instagram.png"
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 const SocialMediaIcons = () => {
     return (
@@ -12,7 +12,7 @@ const SocialMediaIcons = () => {
                 target="_blank"
                 rel="noreferrer"
             >
-                <img alt="linkedin-link" src={linkedIn} />
+                <LinkedInIcon fontSize="large" />
             </a>
 
             <a
@@ -21,7 +21,7 @@ const SocialMediaIcons = () => {
                 target="_blank"
                 rel="noreferrer"
             >
-                <img alt="twitter-link" src={twitter} />
+                <TwitterIcon fontSize="large" />
             </a>
 
             <a
@@ -30,7 +30,7 @@ const SocialMediaIcons = () => {
                 target="_blank"
                 rel="noreferrer"
             >
-                <img alt="facebook-link" src={facebook} />
+                <FacebookRoundedIcon fontSize="large" />
             </a>
 
             <a
@@ -39,7 +39,7 @@ const SocialMediaIcons = () => {
                 target="_blank"
                 rel="noreferrer"
             >
-                <img alt="instagram-link" src={instagram} />
+                <InstagramIcon fontSize="large" />
             </a>
         </div>
     )

@@ -1,5 +1,6 @@
 import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
+import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 
 const Testimonials = () => {
     const testimonialStyles = `mx-auto relative max-w-[400px] h-[350px] flex flex-col
@@ -41,7 +42,9 @@ const Testimonials = () => {
                         visible: { opacity: 1, scale: 1 }
                     }}
                 >
-                    <p className="font-playfair text-6xl">“</p>
+                    <p className="font-playfair text-6xl">
+                        <FormatQuoteIcon fontSize="large" />
+                    </p>
                     <p className="text-center text-xl">
                         Lorem ipsum dolor sit amet consectetur adipisicing.
                     </p>
@@ -58,7 +61,9 @@ const Testimonials = () => {
                         visible: { opacity: 1, scale: 1 }
                     }}
                 >
-                    <p className="font-playfair text-6xl">“</p>
+                    <p className="font-playfair text-6xl">
+                        <FormatQuoteIcon fontSize="large" />
+                    </p>
                     <p className="text-center text-xl">
                         Lorem ipsum dolor sit amet consectetur adipisicing.
                     </p>
@@ -75,7 +80,9 @@ const Testimonials = () => {
                         visible: { opacity: 1, scale: 1 }
                     }}
                 >
-                    <p className="font-playfair text-6xl">“</p>
+                    <p className="font-playfair text-6xl">
+                        <FormatQuoteIcon fontSize="large" />
+                    </p>
                     <p className="text-center text-xl">
                         Lorem ipsum dolor sit amet consectetur adipisicing.
                     </p>
